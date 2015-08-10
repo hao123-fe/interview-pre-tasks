@@ -3,7 +3,7 @@
 支持左右轮播和淡入淡出两种效果，同一个页面可以出现多个slider。
 
 支持选项：
-* `slideEffect` : `slide`|`fadeout`，轮播效果，左右轮播或者淡入淡出
+* `slideEffect` : `'slide'`|`'fadeout'`，轮播效果，左右轮播或者淡入淡出
 * `slideInterval`: `1000` ，自动轮播的时间间隔ms
 
 支持方法：
