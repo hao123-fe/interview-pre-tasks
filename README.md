@@ -7,7 +7,7 @@ hao123前端面试作业
 如果你的pull request通过，我们会通知你进行面试。
 
 可选任务列表：
-* 任务1：[slider](./tree/master/task1-slider)
-* 任务2：[suggest](./tree/master/task1-suggest)
-* 任务3：[tabs](./tree/master/task1-tabs)
-* 任务4：[paging](./tree/master/task1-paging)
+* 任务1：[slider](./task1-slider)
+* 任务2：[suggest](./task1-suggest)
+* 任务3：[tabs](./task1-tabs)
+* 任务4：[paging](./task1-paging)
