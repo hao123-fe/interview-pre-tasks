@@ -8,6 +8,6 @@ hao123前端面试作业
 
 可选任务列表：
 * 任务1：[slider](./task1-slider)
-* 任务2：[suggest](./task1-suggest)
-* 任务3：[tabs](./task1-tabs)
-* 任务4：[paging](./task1-paging)
+* 任务2：[suggest](./task2-suggest)
+* 任务3：[tabs](./task3-tabs)
+* 任务4：[paging](./task4-paging)
