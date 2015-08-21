@@ -11,5 +11,6 @@ hao123前端面试作业
 * 任务2：[suggest](./task2-suggest)
 * 任务3：[tabs](./task3-tabs)
 * 任务4：[paging](./task4-paging)
+* 任务5：[scollbar](./task5-scollbar)
 
 关于面试作业有任何问题请联系：hao123-hr@baidu.com，主题注明"关于面试作业"，或者直接提issue。
