@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>test</title>
+	<style>
+	*{padding: 0;margin: 0;}
+	body{height: 2500px}
+	.scroll{
+		width: 100px;
+		border: 1px solid #cacaca;
+		height: 500px;
+		position: relative;
+		overflow: hidden;
+		padding: 10px;
+		float: left;
+	}
+	.view{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.bar{
+		position: absolute;
+		z-index: 10;
+		right: 0;
+		top: 0;
+		width: 6px;
+		height: 100%;
+		background-color: transparent;transition:background-color .5s;
+	}
+	.bar .thumb{
+		position: absolute;
+		top: 0;
+		width: 6px;
+		border-radius: 5px;
+		left: 0;
+		display: block;
+		background-color: #C7C8C8;
+		transition:background-color .5s;
+	}
+	.bar:hover{background-color: #D6D6D6;}
+	.bar:hover .thumb{background-color: #939497;}
+
+	</style>
+</head>
+<body>
+	<div class="scroll s1">
+		<div class="view">巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉巴拉巴拉扒拉没了</div>
+		<div class="bar"><span class='thumb'></span></div>
+	</div>
+	<div class="scroll s2">
+		<div class="view">巴拉巴拉</div>
+		<div class="bar"><span class='thumb'></span></div>
+	</div>
+	<script type='text/javascript'>
+		var Hscroll=function (obj) {
+			var oScroll=document.querySelector(obj);
+			var oView=oScroll.querySelector('.view');
+			var oBar=oScroll.querySelector('.bar');
+			var oThumb=oScroll.querySelector('.thumb');
+
+
+			var scrollH=oScroll.offsetHeight;
+			var viewH=oView.offsetHeight;
+			if(viewH<scrollH){return false;}
+			// 比例
+			var nPer=scrollH/viewH;
+			// 初始化滑块高度
+			oThumb.style.height=oBar.offsetHeight*nPer+'px';
+
+			// 滑块滚动
+			var disY=0;
+			
+			oThumb.onmousedown=function (ev)
+			{
+				var oEvent=ev||event;
+				
+				disY=oEvent.clientY-oThumb.offsetTop;
+				document.onmousemove=function (ev)
+				{
+					var oEvent=ev||event;
+					var t=oEvent.clientY-disY;
+					
+					
+					if(t<0)
+					{
+						t=0;
+					}
+					else if(t>scrollH-oThumb.offsetHeight)
+					{
+						t=scrollH-oThumb.offsetHeight;
+					}
+					
+					oThumb.style.top=t+'px';
+					oView.style.top=-(t/nPer)+'px';
+				};
+				
+				document.onmouseup=function ()
+				{
+					document.onmousemove=null;
+					document.onmouseup=null;
+				};
+				
+				return false;
+			};
+
+			// 滚轮
+			oView.onmousewheel=function(e){
+				var ev=e||event;
+				var speed=10;
+				var nTop=parseInt(this.style.top)||0;
+				var viewTop=oView.offsetTop;
+				if(ev.wheelDelta>0){
+					// 上
+					if(-viewTop>speed){
+						this.style.top=nTop+speed+'px';
+					}else{
+						this.style.top=0;
+						return true;
+					}
+				}else{
+					
+					if(viewH+viewTop-speed>scrollH){
+						this.style.top=nTop-speed+'px';
+					}else{
+						this.style.top=-(viewH-scrollH)+'px';
+						return true;
+					}
+				}
+				oThumb.style.top=-oView.offsetTop*nPer+'px';
+
+				return false;
+			}
+		}
+		Hscroll('.s1');
+		Hscroll('.s2');
+	</script>
+</body>
+</html>
