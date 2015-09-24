@@ -1,0 +1,32 @@
+.box{position:relative;width:490px;height:180px;background:#333;border-radius:5px;border:8px solid #fff;margin:100px auto; cursor: pointer;}
+.box .list{position:relative;width:100%;height:100%;overflow:hidden;}
+.box .count{position:absolute;right:0;bottom:5px;}
+.box .count li{color:#fff;float:left;width:20px;height:20px;cursor:pointer;margin-right:5px;overflow:hidden;background:#000;opacity:0.5;filter:alpha(opacity=50);border-radius:20px;}
+.box .count li.current{color:#fff;opacity:1;filter:alpha(opacity=100);font-weight:700;background:#000;}
+
+
+
+/*fadeCss*/
+.box.fadeCss .list ul.ullist  li{position:absolute;top:0;left:0;width:100%;opacity:0;filter:alpha(opacity=0);}
+.box.fadeCss .list ul.ullist li.current{opacity:1;filter:alpha(opacity=100);}
+
+
+/*upCss*/
+
+.box.upCss .list ul.ullist{position:absolute;top:0;left:0;}
+.box.upCss .list ul.ullist li{width:490px; height:180px;overflow:hidden;}
+.box.upCss .list ul.ullist li img{ width: 100%; height: 100%;}
+
+
+/*leftCss*/
+.box.leftCss .list ul.ullist{position:absolute;top:0;left:0;}
+.box.leftCss .list ul.ullist li{float:left;width:490px; height:180px;overflow:hidden;}
+.box.leftCss .list ul.ullist li img{ width: 100%; height: 100%;}
+
+
+
+
+
+
+
+
