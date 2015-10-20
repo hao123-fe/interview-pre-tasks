@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import "compass";
+
+body {
+  font-family: "Lucida Sans","Lucida Grande",sans-serif;
+  font-size: 76%;
+  background: #EFEFEF;
+}
+
+a {
+  color: #4A4A4A;
+  border: 0;
+  outline: 0;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px;
+
+  a {
+    background: #fff;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 4px 12px;
+    text-decoration: none;
+    line-height: 1.5em;
+
+    @include border-radius(3px);
+  }
+
+  a:hover {
+    background-color: #BEBEBE;
+    color: #fff;
+  }
+  a:active {
+    background: rgba(190, 190, 190, 0.75);
+  }
+
+  input {
+    width: 30px;
+    height: 20px;
+  }
+}
