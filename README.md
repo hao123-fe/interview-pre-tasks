@@ -2,11 +2,11 @@
 
 hao123前端面试作业
 
-请从tasks里面选择1-2个感兴趣或者能体现你代码设计和编码能力的task，fork到你的github，完成之后提pull request给我们，请在收到面试作业通知起的3天内提交pull request，多次提交以最后一次为准。
+请从tasks里面选择1-2个感兴趣或者能体现你代码设计和编码能力的task，fork到你的github，完成之后提 pull request 给我们，请在收到面试作业通知起的3天内提交 pull request，多次提交以最后一次为准。
 
-我们会尽快评审你的pull request（1-2工作日）。
+我们会尽快评审你的 pull request，如果通过，HR 会联系安排面试。
 
-注意：请在pull request时留下个人信息（姓名 或 简历里面的 邮箱/手机号后4位）
+注意：请在pull request comment 留下个人信息（姓名 或 简历里面的邮箱 或 手机号后4位）
 
 可选任务列表：
 * 任务1：[slider](./task1-slider)
