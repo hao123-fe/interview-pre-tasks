@@ -1,0 +1,158 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="slider.css">
+	<script src="slider.js"></script>
+	<script>
+		window.onload=function () {
+			var oDiv=document.getElementById('container');
+			var oBtnPrev=getByClass(oDiv, 'prev')[0];
+			var oBtnNext=getByClass(oDiv, 'next')[0];
+			var oBigLeft=getByClass(oDiv, 'bigLeft')[0];
+			var oBigRight=getByClass(oDiv, 'bigRight')[0];
+
+			var oSmallPic=getByClass(oDiv, 'smallPic')[0];
+			var oSmallUl=oSmallPic.getElementsByTagName('ul')[0];
+			var aSmallLi=oSmallUl.getElementsByTagName('li');
+//			alert("aSmallLi.length=="+aSmallLi.length);
+			var oBigUl=getByClass(oDiv, 'bigPic')[0];
+			var aBigLi=oBigUl.getElementsByTagName('li');
+//			alert("aBigLi.length=="+aBigLi.length);
+			var iNow=0;  //指向当前鼠标所在位置
+			var iNow1=0;
+			var iNow2=0;
+			var iMinZindex=2;
+			var i=0;
+			var len=aSmallLi[0].offsetWidth;  //包含padding的宽度
+//			alert("len=="+len);
+			oSmallUl.style.width=aSmallLi.length*len+'px';
+
+			//移入移出显示或隐藏左右按钮
+			oBtnPrev.onmouseover=oBigLeft.onmouseover=function () {
+				move(oBtnPrev, 100, 'opacity');
+			};
+			oBtnPrev.onmouseout=oBigLeft.onmouseout=function () {
+				move(oBtnPrev, 0, 'opacity');
+			};
+			oBtnNext.onmouseover=oBigRight.onmouseover=function () {
+				move(oBtnNext, 100, 'opacity');
+			};
+			oBtnNext.onmouseout=oBigRight.onmouseout=function () {
+				move(oBtnNext, 0, 'opacity');
+			};
+
+			function slide() {
+				//改变smallPic的img透明度
+				if(iNow2==aBigLi.length-1)
+					iNow2=0;
+				else
+					iNow2++;
+				//改变smallPic的显示（滚动）
+				if(iNow1==aSmallLi.length-1) {
+					aSmallLi[0].style.position = 'relative';
+					aSmallLi[0].style.left = aSmallLi.length  + 'px';
+					iNow1 = 0;
+//					alert("iNow1=="+iNow1);
+				}
+				else
+					iNow1++;
+				if(iNow1==0) {
+//					alert("sdfa");
+					move(oSmallUl, -(iNow1) * len, 'left');
+//					alert("aSmallLi[0]=="+aSmallLi[0].style.left);
+				}
+				else if(iNow1==aSmallLi.length-1) {
+					move(oSmallUl, -(iNow1 - 2) * len, 'left',function(){
+						if(iNow1==0) {
+							aSmallLi[0].style.position = 'static';
+							oSmallUl.style.left = 0;
+							iNow2 = 0;
+						}
+					});
+				}
+				else
+					move(oSmallUl, -(iNow1-1)*aSmallLi[0].offsetWidth, 'left');
+//				alert(iNow1);
+				for(i=0;i<aSmallLi.length;i++)
+					move(aSmallLi[i], 50, 'opacity');
+				move(aSmallLi[iNow1], 100, 'opacity');
+				//显示当前bigPic
+				aBigLi[iNow2].style.zIndex=iMinZindex++;
+				aBigLi[iNow2].style.height=0;
+				move(aBigLi[iNow2], oBigUl.offsetHeight, 'height');
+			}
+
+			var auto_timer=setInterval(slide,4000);
+
+			for(i=0;i<aSmallLi.length;i++) {
+				aSmallLi[i].index=i;
+				aSmallLi[i].onmouseover=function () {
+					move(this, 100, 'opacity');
+				};
+				aSmallLi[i].onmouseout=function () {
+					if(this.index!=iNow)
+						move(this, 50, 'opacity');
+				};
+				//点击小图显示大图
+				aSmallLi[i].onclick=function () {
+					if(this.index==iNow) return;
+					iNow=this.index;
+//					alert("iNow==="+iNow);
+					iNow1=iNow-1;
+					iNow2=iNow-1;
+					slide();
+				};
+				//点击左右按钮
+				oBtnPrev.onclick=function () {
+					iNow--;
+					if(iNow==-1)
+						iNow=aSmallLi.length-1;
+					iNow1=iNow;
+					iNow2=iNow;
+					slide();
+				};
+				oBtnNext.onclick=function () {
+					iNow++;
+					if(iNow==aSmallLi.length)
+						iNow=0;
+					iNow1=iNow;
+					iNow2=iNow;
+					slide();
+				};
+			}
+		}
+	</script>
+</head>
+
+<body>
+<div id="container" class="container">
+    <ul class="bigPic">
+		<p class="prev"></p>
+		<p class="next"></p>
+
+		<a class="bigLeft" href="javascript:;"></a>
+		<a class="bigRight" href="javascript:;"></a>
+
+        <li style="z-index:1;"><img src="img/season1.jpg" /></li>
+        <li><img src="img/mathew&mary.jpeg" /></li>
+        <li><img src="img/sisters.jpg" /></li>
+        <li><img src="img/lord.jpg" /></li>
+        <li><img src="img/downstairs.jpg" /></li>
+        <li><img src="img/feast.jpg" /></li>
+    </ul>
+    <div class="smallPic">
+        <ul>
+            <li style="filter: alpha(opacity:100); opacity: 1;"><img src="img/season1.jpg" /></li>
+			<li><img src="img/mathew&mary.jpeg" /></li>
+			<li><img src="img/sisters.jpg" /></li>
+			<li><img src="img/lord.jpg" /></li>
+			<li><img src="img/downstairs.jpg" /></li>
+			<li><img src="img/feast.jpg" /></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

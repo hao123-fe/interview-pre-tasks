@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+img {
+    border: 0;
+}
+.smallPic img {
+    width: 120px;
+    height: 70px;
+}
+.bigPic img {
+    width: 400px;
+    height: 300px;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 400px;
+    height: 385px;
+    background: gray;
+}
+.bigPic {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.bigPic li {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.bigLeft {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index:3000;
+}
+.bigRight {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 200px;
+    top: 0;
+    z-index:3000;
+}
+.bigPic .prev {
+    width: 60px;
+    height: 60px;
+    background: url(../images/btn.gif) no-repeat;
+    position: absolute;
+    top: 130px;
+    left: 10px;
+    z-index: 3001;
+    cursor: pointer;
+    filter:alpha(opacity: 0);
+    opacity:0;
+}
+.bigPic .next {
+    width: 60px;
+    height: 60px;
+    background: url(../images/btn.gif) no-repeat 0 -60px;
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    z-index: 3001;
+    cursor: pointer;
+    filter:alpha(opacity: 0);
+    opacity:0;
+}
+.smallPic {
+    width: 380px;
+    height: 70px;
+    position: relative;
+    top: 7px;
+    left: 10px;
+    overflow: hidden;
+}
+.smallPic ul {
+    width:390px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.smallPic li {
+    width: 120px;
+    height: 70px;
+    float: left;
+    padding-right: 10px;
+    cursor: pointer;
+    filter: alpha(opacity:50);
+    opacity: 0.5;
+}
