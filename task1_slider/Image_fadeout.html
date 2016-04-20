@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播机制</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        div{
+            width:550px;
+            height: 321px;
+            position: relative;
+            margin:0 auto;
+            margin-top:100px;
+        }
+        ul li{
+            float:left;
+            list-style-type: none;
+            margin:0;
+            padding:0;
+        }
+        #slide li{
+            position:absolute;
+        }
+        #btn li{
+            z-index: 100;
+            display:inline-block;
+            width:35px;
+            height:28px;
+            line-height:28px;
+            text-align: center;
+            border:1px solid black;
+        }
+        #btn{
+            display:block;
+            position: absolute;
+            top:290px;
+            left:180px;
+            color:black;
+        }
+        a{
+            text-decoration: none;
+        }
+        .hot{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<p></p>
+<p></p>
+<div>
+    <ul id="slide">
+        <li ><a href="#"><img src="images/1.jpg"></a></li>
+        <li ><a href="#"><img src="images/2.jpg" ></a></li>
+        <li ><a href="#"><img src="images/3.jpg" ></a></li>
+        <li ><a href="#"><img src="images/4.jpg" ></a></li>
+        <li ><a href="#"><img src="images/5.jpg" ></a></li>
+    </ul>
+    <ul id="btn">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+	<script type="text/javascript" src="Image_fadeout.js"></script>
+</div>
+</body>
+</html>
