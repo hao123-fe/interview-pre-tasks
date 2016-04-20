@@ -1,0 +1,94 @@
+* {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+ }
+
+ul {
+    list-style: none;
+}
+
+.fadeout, .slide {
+    width: 550px;
+    height: 300px;
+    position: relative;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.fadeout .num, .slide .num {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    text-align: center;
+    font-size: 0px;
+}
+
+.fadeout .num li, .slide .num li {
+    width: 10px;
+    height: 10px;
+    background: #888;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.fadeout .btn,.slide .btn {
+    width: 30px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    display: none;
+}
+
+.fadeout:hover .btn, .slide:hover .btn {
+    display: block;
+}
+
+.fadeout .left, .slide .left {
+    left: 0
+}
+
+.fadeout .right, .slide .right {
+    right: 0;
+}
+
+.fadeout .img li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.fadeout .img li img {
+    width: 550px;
+    height: 300px;
+}
+
+.fadeout .num li.active {
+    background: limegreen;
+}
+
+.slide .img {
+    width: 5000px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+}
+
+.slide .img li {
+    float: left;
+}
+
+.slide .num li.on {
+    background: limegreen;
+}
+
