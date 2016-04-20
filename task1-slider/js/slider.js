@@ -1,6 +1,8 @@
 /**
  * Created by chenhaoact on 16/4/19.
+ * 通过jQuery实现的简单的淡入淡出与左右无缝轮播
  */
+
 //淡入淡出
 $(function () {
     //代码初始化
