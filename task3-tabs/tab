@@ -1,0 +1,41 @@
+;(function($){
+	$.fn.extend({
+		tab:function(options){
+			var aLi = $(".tab_menu li"),
+				aDiv = $(".tab_content div"),
+				trigger = options.trigger?options.trigger:'click',
+				effect = options.effect?options.effect:'slide',
+
+				doSlide = function(idx){
+					Div[idx].siblings().slideUp();
+					aDiv[idx].slideDown();
+				},
+				doFade = function(idx){
+					aDiv[idx].siblings().fadeOut();
+					aDiv[idx].fadeIn();
+				}；
+				doAnimate = function(index){
+					if(effect=='fadeout'){//效果是淡入淡出
+							doFade(index);
+						}else{//效果是左右滑动
+							doSlide(index);
+						}
+				}
+			for(var i = 0; i < aLi.length; i++){
+				aLi[i].index = i;
+				if(trigger=='click'){//触发事件是click
+					aLi[i].on('click',function(){
+						var index=this.index;
+						doAnimate(index);
+					});
+				}else if(trigger=='hover'){//触发事件是hover
+					aLi[i].mouseover(function(){
+						var index=this.index;
+						doAnimate(index);
+					});
+				}
+				
+			}
+		}
+	});
+})(jQuery); 
