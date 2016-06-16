@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <title>轮播图组件</title>
+    <link rel="stylesheet" href="src/slider.css">
+</head>
+<body>
+<div id="test" class="slider_frame">
+    <ul class="slider_container">
+        <li><img src="imges/baidushadu.jpg"></li>
+        <li class="hidden"><img src="imges/ditu.jpg"></li>
+        <li class="hidden"><img src="imges/waimai.jpg"></li>
+        <li class="hidden"><img src="imges/nuomi.jpg"></li>
+    </ul>
+    <a class="slider_change slider_change_previous"></a>
+    <a class="slider_change slider_change_next"></a>
+    <div class="slider_box">
+        <ul>
+            <li class="current_box"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="src/jquery-2.2.3.js"></script>
+<script src="src/slider.js"></script>
+<script>
+    var setActiveSlide=$('#test').createSlide({slideEffect:'fadeout'});
+    setActiveSlide(2);
+</script>
+</html>

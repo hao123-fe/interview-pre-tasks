@@ -1,0 +1,86 @@
+.slider_frame{
+    width:700px;
+    height: 400px;
+    background: pink;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.slider_container{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider_container li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.slider_container img{
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*兼容IE代码*/
+}
+/*上一张下一张图标*/
+.slider_change{
+    position: absolute;
+    height: 70px;
+    width: 35px;
+    background-color: rgba(0, 0, 0, .2);
+    top: 50%;
+    margin-top: -35px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slider_change:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0,0.5);
+}
+.slider_change_previous{
+    left: 10px;
+    background-image: url("../imges/left.png");
+}
+.slider_change_next{
+    right: 10px;
+    background-image: url("../imges/right.png");
+}
+/*下面的小圆点*/
+.slider_box{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.slider_box ul{
+    height: 22px;
+    background-color: rgba(0, 0, 0, .4);
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    border-radius: 11px;
+}
+.slider_box ul li{
+    float: left;
+    height: 12px;
+    width: 12px;
+    background-color: #b7b7b7;
+    margin: 5px;
+    border-radius: 6px;
+}
+.slider_box ul li:hover{
+    background-color: #FF6100;
+    cursor: pointer;
+}
+.slider_box ul li.current_box{
+    background-color: #FF6100;
+}
+.hidden{
+    display: none;
+}
