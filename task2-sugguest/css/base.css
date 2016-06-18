@@ -7,35 +7,6 @@ body {
 	background-color:#333;
 }
 /* Header.css */
-
-#modal-dialog-login {
-	width:400px;
-	margin-top:10%;
-}
-#btnLogin {
-	width:300px;
-}
-
-#btnRegister{
-	width:400px;
-	}
-.modal-footer{
-	text-align:center;
-	}
-#rmbpwd{
-	display:inline;
-	}
-#fgtpwd{
-	display:inline;
-	float:right;
-	}
-#registertip{
-	margin-top:10px;
-	}
-#modal-dialog-register{
-	width:500px;
-	margin-top:5%;
-	}
 /*修改navbar导航条文字颜色*/	
 .navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav > li > a,.navbar-inverse .navbar-link {
 color: #FFF;
@@ -45,51 +16,4 @@ color: #FFF;
 	color:#9d9d9d;
 	}
 
-/* index.css */
-#container-index {
-	text-align: center;
-}
 
-/* footer.css */
-#hr-footer {
-	margin-bottom: 20px;
-}
-
-#upst-footer {
-	left: 0;
-	margin-top:0px;
-	width: 100%;
-	min-width: 1000px;
-	height: 140px;
-	font-size: 12px;
-	background-color: #F4F4F5;
-}
-
-#upst-footer img {
-	margin-top: 10px;
-	width:240px;
-	height: 70px;
-}
-
-#copyright {
-	margin-top: 10px;
-}
-
-#aboutus {
-	margin-top: 60px;
-	margin-bottom: auto;
-}
-
-
-/*joinUs.css*/
-#container-joinUs{
-	width:960px;
-}
-/*aboutUs.css*/
-#aboutus_h5_1,
-#aboutus_h5_2,
-#aboutus_h5_3,
-#aboutus_h5_4,
-#aboutus_h5_5{
-	color:#0080ff;
-}
