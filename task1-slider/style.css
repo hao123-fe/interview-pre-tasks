@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.slider{
+    position: relative;
+    width: 192px;
+    height: 288px;
+    display: flex;
+    left: 0;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px #ccc;
+    border-radius: 10px;
+    margin: 20px;
+
+}
+.items{
+    /*display: block;*/
+    position: relative;
+    left: 0px;
+
+}
+ul,li{
+    list-style: none;
+    display: inline-block;
+}
+.icon-group{
+    /*display: block;*/
+    width: 40px;
+    position: absolute;
+    left:50%;
+    top:90%;
+    transform: translate(-50%);
+    z-index: 999;
+}
+.icons{
+    margin: 3px;
+    height: 10px;
+    width:10px;
+    border-radius: 10px;
+    background-color: rgba(200,200,200,0.8);
+    z-index: 9999;
+
+}
+.active{
+    background-color: rgba(255,255,255,1);
+}
+
+.fadeInOut{
+    position: absolute;
+}
+
+
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity:1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+.fade_out{
+    -webkit-animation-name: fadeOut; /*动画名称*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-fill-mode: forwards;
+    /*-webkit-animation-delay: 0s; !*延迟时间*!*/
+    /*position:absolute;*/
+}
+
+.fade_in{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    -webkit-animation-iteration-count: 1; /*动画次数*/
+    /*-webkit-animation-delay: 0s; !*延迟时间*!*/
+    z-index: 99;
+}
+
