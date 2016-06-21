@@ -1,0 +1,20 @@
+html{
+	height:100%;
+}
+body {
+	padding-top: 50px;
+	heiht:100%;
+	background-color:#333;
+}
+
+/* Header.css */
+/*修改navbar导航条文字颜色*/	
+.navbar-inverse .navbar-brand,.navbar-inverse .navbar-nav > li > a,.navbar-inverse .navbar-link {
+color: #FFF;
+}
+
+.navbar-inverse .navbar-brand:hover,.navbar-inverse .navbar-nav > li > a:hover,.navbar-inverse .navbar-link:hover{
+	color:#9d9d9d;
+	}
+
+

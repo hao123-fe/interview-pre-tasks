@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+
+<title>task2-sugguest</title>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/suggest.css" />
+
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<style type="text/css">
+	.backgroundDiv{
+		background-image:url(images/yanzi.jpg);
+		background-repeat: no-repeat;
+		width:100%;
+		height:690px;
+		background-size:cover;
+		margin:0 auto;
+	}
+	.tabsSearch{
+		position:absolute;
+		text-align: center;
+		width: 40%;
+		height: 150px;
+		top:250px;
+		left:180px;
+	}
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-header"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#"><strong>Sugguest</strong></a></div>
+    <div class="collapse navbar-collapse" id="navbar-header" >
+      <ul class="nav navbar-nav">
+		<li><a href="#" id="submitPaper">功能1</a></li>
+        <li><a href="#">功能2</a></li>
+       <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">功能3<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#tab-A">功能31</a></li>
+            <li><a href="#tab-B">功能32</a></li>
+          </ul>
+        </li>-->
+      </ul>
+      <div>
+			<p class="navbar-text navbar-right"><a href="#" class="navbar-link" data-toggle="modal" data-target="#login">登录</a>  |   <a href="#" class="navbar-link" data-toggle="modal" data-target="#register">注册</a> </p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="backgroundDiv">
+	<div class="tabsSearch">
+			<ul class="nav nav-tabs nav-pills" role="tablist" id="tab-list">
+				<li class="active"><a href="#tab-journal" role="tab"
+					data-toggle="tab">音乐</a></li>
+				<li><a href="#tab-conference" role="tab" data-toggle="tab">电影</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active">
+					<!--<form action="#" method="get" id="frmSearchMusic">-->
+						<div class="input-group">
+							<input type="text" name="keywords" id="searchMusicInput"
+								class="form-control" placeholder="music" autocomplete="off"/><span
+								class="input-group-btn">
+								<input class="btn btn-primary" type="button" value="搜索" />
+							</span>
+						</div>
+						<!-- /input-group -->
+					<!--</form>-->
+				</div>
+				<div class="tab-pane">
+					<form action="https://www.baidu.com/su?" method="get" id="frmSearchMovie">
+						<div class="input-group">
+							<input type="text" name="keywords" id="input-keyword" class="form-control"  autocomplete="off" placeholder="movie"  />
+							<span class="input-group-btn">
+								<input id="input-search" class="btn btn-primary" type="button" value="搜索" />
+							</span>
+						</div>
+						<!-- /input-group -->
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<!--搜索提示框-->
+		<!--<div class="suggest" id="search-suggest" style="display:none">
+			<ul>
+				<li>搜索结果1</li>
+				<li>搜索结果2</li>
+				<li>搜索结果3</li>
+			</ul>
+		</div>-->
+		
+</div>
+
+<script src="lib/jQuery/jquery-1.11.3.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="js/suggest.js"></script>
+<script type="text/javascript">
+
+	console.log($("#searchMusicInput")[0]);
+
+	//调用组件
+	var suggest=new $Suggest($("#searchMusicInput")[0],{
+		//配置参数
+		max_num:10,
+		//onChange:function () {},
+	});
+	suggest.autoSuggest();
+
+	$("#input-search").bind("click",function () {
+		var keyword=$("#searchMusicInput").val();
+		window.location.href='https://www.baidu.com/s?wd='+keyword+'&tn=sitehao123&ie=utf-8';
+	})
+
+</script>
+</body>
+</html>

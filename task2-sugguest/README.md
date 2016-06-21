@@ -15,3 +15,7 @@ suggest API可参考 http://suggestion.baidu.com/su?cb=callback&wd=%E7%99%BE%E5%
 
 支持方法：
 * `add(suggest)`，添加一条推荐，`suggest`的格式可以自己设计
+
+疑问：
+百度接口返回值为10条推荐数据，如果设置推荐词推荐的最大条数小于10，在前端不展示数据即可（最好是不请求）；
+但是要是超过10，怎么设置请求参数？
