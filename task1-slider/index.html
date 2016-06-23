@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery-Slider-example</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+
+
+<!--图片轮播-->
+<section id="slider1">
+    <a class="prev" href="javascript:;"><</a>
+    <a class="next" href="javascript:;">></a>
+    <img src="../images/1.jpg">
+    <img src="../images/2.jpg">
+    <img src="../images/3.jpg">
+</section>
+
+
+
+<section id="slider2">
+    <a class="prev" href="javascript:;"><</a>
+    <a class="next" href="javascript:;">></a>
+    <img src="../images/1.jpg">
+    <img src="../images/2.jpg">
+    <img src="../images/3.jpg">
+    <img src="../images/4.jpg">
+    <img src="../images/4.jpg">
+</section>
+
+
+
+<section id="slider3">
+    <a class="prev" href="javascript:;"><</a>
+    <a class="next" href="javascript:;">></a>
+    <img src="../images/1.jpg">
+    <img src="../images/2.jpg">
+    <img src="../images/3.jpg">
+    <img src="../images/4.jpg">
+</section>
+
+
+<section id="slider4">
+    <a class="prev" href="javascript:;"><</a>
+    <a class="next" href="javascript:;">></a>
+    <img src="../images/1.jpg">
+    <img src="../images/2.jpg">
+    <img src="../images/3.jpg">
+    <img src="../images/4.jpg">
+    <img src="../images/4.jpg">
+</section>
+
+<script src="../lib/jquery-3.0.0.min.js"></script>
+<script src="slider.js"></script>
+<script>
+    $(function(){
+        $('#slider1').setActiveSlide(1,{
+            slideEffect : 'fadeout',
+            slideInterval: 1000,
+            sliderWillSlide:function(now,next){
+                console.log("Before sliding index now is " + now);
+                console.log("Before sliding index next is " + next);
+            },
+            sliderDidSlide: function(now,prev){
+                console.log("After sliding index now is " + now);
+                console.log("After sliding index prev is " + prev);
+            }
+
+        });
+
+        $('#slider2').setActiveSlide(3,{
+            slideInterval: 2000,
+            sliderWillSlide:function(now,next){
+                console.log("Before sliding index now is " + now);
+                console.log("Before sliding index next is " + next);
+            },
+            sliderDidSlide: function(now,prev){
+                console.log("After sliding index now is " + now);
+                console.log("After sliding index prev is " + prev);
+            }
+        });
+
+        $('#slider3').setActiveSlide(2,{
+            autoSlide : false,
+            sliderWillSlide:function(now,next){
+                console.log("Before sliding index now is " + now);
+                console.log("Before sliding index next is " + next);
+            },
+            sliderDidSlide: function(now,prev){
+                console.log("After sliding index now is " + now);
+                console.log("After sliding index prev is " + prev);
+            }
+
+        });
+
+        $('#slider4').setActiveSlide(4,{
+            slideEffect : 'fadeout',
+            autoSlide : false,
+            sliderWillSlide:function(now,next){
+                console.log("Before sliding index now is " + now);
+                console.log("Before sliding index next is " + next);
+            },
+            sliderDidSlide: function(now,prev){
+                console.log("After sliding index now is " + now);
+                console.log("After sliding index prev is " + prev);
+            }
+
+        });
+
+    })
+</script>
+</body>
+</html>

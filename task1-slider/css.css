@@ -1,0 +1,38 @@
+section{
+    display: flex;
+    display: -webkit-flex;
+    width: 1000px;
+    overflow: hidden;
+    margin: 20px auto;
+    position: relative;
+}
+section img{
+    position: relative;
+    left : 0;
+}
+section a{
+    z-index:1000;
+    width:40px;
+    height:40px;
+    position:absolute;
+    text-align:center;
+    text-decoration:none;
+    line-height:40px;
+    font-size:30px;
+    font-weight:bold;
+    filter:alpha(opacity:60);
+    opacity:0.6;
+    top:280px;
+    color:#fff;
+    background-color: #333;
+    display: none;
+}
+section:hover>a{
+    display: block;
+}
+.prev{
+    left:6px;
+}
+.next{
+    right:6px;
+}
